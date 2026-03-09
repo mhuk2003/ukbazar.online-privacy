@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — UK BAZAR</title>
+<link rel="icon" href="./logo-ukbazar.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+  --primary: #667eea;
+  --primary-dark: #4c5fd5;
+  --accent: #fbbf24;
+  --navy: #0f1f3d;
+  --navy2: #1a3a6b;
+  --bg: #f0f4ff;
+  --card: #ffffff;
+  --txt: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f5;
+  --green: #059669;
+  --radius: 18px;
+  --sh: 0 4px 24px rgba(102,126,234,0.10);
+  --sh2: 0 12px 40px rgba(102,126,234,0.18);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans Arabic', sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  direction: rtl;
+  line-height: 1.7;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+.topbar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.tb-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tb-brand img {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: contain;
+  background: white;
+  padding: 2px;
+}
+.tb-brand span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.tb-back {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.tb-back:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(145deg, var(--navy) 0%, var(--navy2) 55%, #2050a0 100%);
+  padding: 56px 20px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 30%, rgba(102,126,234,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 85% 70%, rgba(251,191,36,0.10) 0%, transparent 55%);
+  pointer-events: none;
+}
+/* floating dots */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 1.5px at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(circle 1px at 70% 40%, rgba(255,255,255,0.10) 0%, transparent 100%),
+    radial-gradient(circle 2px at 45% 75%, rgba(255,255,255,0.08) 0%, transparent 100%),
+    radial-gradient(circle 1px at 90% 15%, rgba(255,255,255,0.12) 0%, transparent 100%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(251,191,36,0.18);
+  color: var(--accent);
+  border: 1px solid rgba(251,191,36,0.35);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.hero h1 span {
+  background: linear-gradient(90deg, var(--accent), #fde68a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  color: rgba(255,255,255,0.60);
+  font-size: 0.88rem;
+  max-width: 440px;
+  margin: 0 auto 22px;
+}
+.hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+}
+.hero-meta i { color: var(--accent); }
+
+/* ── TOC CARD ── */
+.toc-wrap {
+  max-width: 900px;
+  margin: -28px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+.toc-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  box-shadow: var(--sh2);
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--navy2);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.toc-item:hover {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  color: var(--primary);
+  transform: translateX(-3px);
+}
+.toc-item .ti-num {
+  width: 22px; height: 22px;
+  background: linear-gradient(135deg, var(--primary), #764ba2);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ── MAIN CONTENT ── */
+.content {
+  max-width: 900px;
+  margin: 32px auto 48px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Summary cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.sum-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 16px 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--sh);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sum-card:hover { transform: translateY(-3px); box-shadow: var(--sh2); }
+.sum-ico {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.si-blue { background: #eff6ff; }
+.si-green { background: #ecfdf5; }
+.si-yellow { background: #fffbeb; }
+.si-red { background: #fef2f2; }
+.si-purple { background: #f5f3ff; }
+.si-teal { background: #ecfeff; }
+.sum-body {}
+.sum-title { font-size: 0.78rem; font-weight: 800; color: var(--navy); margin-bottom: 2px; }
+.sum-text  { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+
+/* Section cards */
+.sec-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--sh);
+  overflow: hidden;
+  animation: fadeUp 0.4s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.sec-card:nth-child(2) { animation-delay: 0.05s; }
+.sec-card:nth-child(3) { animation-delay: 0.10s; }
+.sec-card:nth-child(4) { animation-delay: 0.15s; }
+.sec-card:nth-child(5) { animation-delay: 0.20s; }
+.sec-card:nth-child(6) { animation-delay: 0.25s; }
+.sec-card:nth-child(7) { animation-delay: 0.30s; }
+.sec-card:nth-child(8) { animation-delay: 0.35s; }
+
+.sec-hdr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px 16px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, #f8faff 0%, #fff 100%);
+}
+.sec-num {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--primary), #764ba2);
+  color: #fff;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  font-family: 'Outfit', sans-serif;
+}
+.sec-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+.sec-icon {
+  margin-right: auto;
+  color: var(--primary);
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.sec-body {
+  padding: 18px 22px 20px;
+}
+.sec-body p {
+  font-size: 0.87rem;
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.sec-body p:last-child { margin-bottom: 0; }
+.sec-body ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.sec-body ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: #374151;
+  line-height: 1.65;
+  padding: 9px 12px;
+  background: var(--bg);
+  border-radius: 9px;
+  border: 1px solid var(--border);
+}
+.sec-body ul li::before {
+  content: '✓';
+  color: var(--green);
+  font-weight: 800;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: #ecfdf5;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlight-box {
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+  border: 1px solid #c7d2fe;
+  border-right: 4px solid var(--primary);
+  border-radius: 10px;
+  padding: 13px 16px;
+  margin-top: 12px;
+  font-size: 0.83rem;
+  color: var(--navy2);
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.highlight-box i { color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+
+/* Contact section */
+.contact-card {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #2050a0 100%);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15,31,61,0.30);
+}
+.contact-card::before {
+  content: '';
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 200px; height: 200px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+.contact-card::after {
+  content: '';
+  position: absolute;
+  left: -40px; bottom: -40px;
+  width: 160px; height: 160px;
+  background: rgba(251,191,36,0.05);
+  border-radius: 50%;
+}
+.contact-card > * { position: relative; z-index: 1; }
+.contact-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 7px;
+}
+.contact-card p { color: rgba(255,255,255,0.55); font-size: 0.82rem; margin-bottom: 18px; }
+.contact-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.cbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+.cbtn-primary {
+  background: linear-gradient(135deg, var(--accent), #f59e0b);
+  color: #1a1a1a;
+  box-shadow: 0 4px 14px rgba(251,191,36,0.35);
+}
+.cbtn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(251,191,36,0.45); }
+.cbtn-outline {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.cbtn-outline:hover { background: rgba(255,255,255,0.20); }
+
+/* Footer */
+footer {
+  background: var(--navy);
+  padding: 22px 20px;
+  text-align: center;
+}
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-brand img { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--accent); object-fit: contain; background: white; padding: 2px; }
+.footer-brand span { font-family: 'Outfit', sans-serif; font-weight: 800; color: #fff; font-size: 0.9rem; }
+footer p { color: rgba(255,255,255,0.35); font-size: 0.73rem; }
+footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--accent); }
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .hero { padding: 44px 16px 40px; }
+  .hero h1 { font-size: 1.5rem; }
+  .toc-wrap { padding: 0 12px; }
+  .toc-card { grid-template-columns: 1fr 1fr; gap: 6px; padding: 16px 14px; }
+  .toc-item { font-size: 0.74rem; padding: 8px 9px; }
+  .content { padding: 0 12px; margin-top: 22px; gap: 14px; }
+  .sec-hdr { padding: 14px 16px 12px; }
+  .sec-body { padding: 14px 16px 16px; }
+  .summary-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .sum-card { padding: 12px 10px; }
+  .contact-card { padding: 22px 16px; }
+  .contact-btns { flex-direction: column; align-items: center; }
+  .cbtn { width: 100%; max-width: 280px; justify-content: center; }
+}
+@media (max-width: 380px) {
+  .toc-card { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="tb-brand" href="./index.html">
+      <img src="./logo-ukbazar.png" alt="UK BAZAR" onerror="this.style.display='none'">
+      <span>UK BAZAR</span>
+    </a>
+    <a class="tb-back" href="./index.html">
+      <i class="fas fa-arrow-right"></i>
+      گەڕانەوە
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <i class="fas fa-shield-alt"></i>
+      Privacy Policy
+    </div>
+    <h1>سیاسەتی <span>تایبەتمەندی</span></h1>
+    <p class="hero-sub">چۆن زانیاریەکانت بەڕێوەدەبەین و پارێزراون لە UK BAZAR</p>
+    <div class="hero-meta">
+      <i class="fas fa-calendar-check"></i>
+      <span>نوێکراوەوە: ٧ی مارچ، ٢٠٢٦</span>
+      &nbsp;·&nbsp;
+      <i class="fas fa-globe"></i>
+      <span>UK POST LTD — UK BAZAR</span>
+    </div>
+  </div>
+</header>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc-wrap">
+  <div class="toc-card">
+    <a href="#sec1" class="toc-item"><span class="ti-num">1</span> زانیاری کۆکردنەوە</a>
+    <a href="#sec2" class="toc-item"><span class="ti-num">2</span> پرۆسەکردنی زانیاری</a>
+    <a href="#sec3" class="toc-item"><span class="ti-num">3</span> هاوبەشی زانیاری</a>
+    <a href="#sec4" class="toc-item"><span class="ti-num">4</span> کووکیز</a>
+    <a href="#sec5" class="toc-item"><span class="ti-num">5</span> ماوەی پاراستن</a>
+    <a href="#sec6" class="toc-item"><span class="ti-num">6</span> پارێزگاری</a>
+    <a href="#sec7" class="toc-item"><span class="ti-num">7</span> مافەکانت</a>
+    <a href="#sec8" class="toc-item"><span class="ti-num">8</span> کۆنترۆل</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+  <!-- Summary Cards -->
+  <div class="summary-grid">
+    <div class="sum-card">
+      <div class="sum-ico si-blue"><i class="fas fa-user-shield" style="color:#2563eb"></i></div>
+      <div class="sum-body">
+        <div class="sum-title">زانیاری کەسی</div>
+        <div class="sum-text">تەنها زانیاریەی کە خۆت دەدەیتەوە کۆدەکەینەوە</div>
+      </div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-ico si-green"><i class="fas fa-lock" style="color:#059669"></i></div>
+      <div class="sum-body">
+        <div class="sum-title">زانیاری هەستیار</div>
+        <div class="sum-text">زانیاری هەستیاری پرۆسە ناکرێت</div>
+      </div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-ico si-yellow"><i class="fas fa-share-alt" style="color:#d97706"></i></div>
+      <div class="sum-body">
+        <div class="sum-title">لایەنی سێیەم</div>
+        <div class="sum-text">هیچ زانیاریەک لە لایەنی سێیەم کۆناکەینەوە</div>
+      </div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-ico si-purple"><i class="fas fa-cog" style="color:#7c3aed"></i></div>
+      <div class="sum-body">
+        <div class="sum-title">مەبەست</div>
+        <div class="sum-text">بۆ گەیاندن، پشتگیری و باشترکردنی خزمەت</div>
+      </div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-ico si-red"><i class="fas fa-shield-alt" style="color:#dc2626"></i></div>
+      <div class="sum-body">
+        <div class="sum-title">پارێزگاری</div>
+        <div class="sum-text">پرۆسەی پارێزگاریمان باش دامەزراوە</div>
+      </div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-ico si-teal"><i class="fas fa-handshake" style="color:#0891b2"></i></div>
+      <div class="sum-body">
+        <div class="sum-title">مافەکانت</div>
+        <div class="sum-text">مافی بینین، گۆڕین و سڕینەوەی زانیارییەکانت</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="sec-card" id="sec1">
+    <div class="sec-hdr">
+      <div class="sec-num">1</div>
+      <div class="sec-title">چ زانیاریەک کۆدەکەینەوە؟</div>
+      <i class="fas fa-database sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>زانیاری کەسی کۆدەکەینەوە کە بە خوێندنەوەی فۆرمەکان یان بەکارهێنانی خزمەتەکانمان خۆت دەتدەیتەوە، لەوانە:</p>
+      <ul>
+        <li>ناو و ژمارەی تەلەفۆن</li>
+        <li>ناونیشانی گەیاندن (شار، کۆدی پۆستی، ناونیشان)</li>
+        <li>زانیاری پارەدان بۆ پرۆسەکردنی داواکارییەکان</li>
+        <li>زانیاری بەکارهێنەر لە سایت و ئەپلیکەیشنەکە</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="sec-card" id="sec2">
+    <div class="sec-hdr">
+      <div class="sec-num">2</div>
+      <div class="sec-title">چۆن زانیاریەکان پرۆسە دەکرێن؟</div>
+      <i class="fas fa-cogs sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>زانیاریەکانت تەنها کاتێ پرۆسە دەکرێن کە هۆکاری یاساییمان هەبێت. مەبەستەکانمان ئەمانەن:</p>
+      <ul>
+        <li>پڕکردنەوە و بەڕێوەبردنی داواکارییەکانت</li>
+        <li>پێدانی پشتگیری بە کڕیارەکان</li>
+        <li>ناردنی نوێکردنەوە لەبارەی گەیاندنەکەت</li>
+        <li>باشترکردنی خزمەتەکانمان</li>
+        <li>پارێزگاری لە دژی تاوانکاری و دووبارەکردنەوەی درۆ</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-info-circle"></i>
+        زانیارییەکانت بە هیچ شێوەیەک بە لایەنی سێیەم فرۆشراو نەبووین.
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="sec-card" id="sec3">
+    <div class="sec-hdr">
+      <div class="sec-num">3</div>
+      <div class="sec-title">کەی و لەگەڵ کێ زانیاری هاوبەش دەکرێت؟</div>
+      <i class="fas fa-share-nodes sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>زانیارییەکانت تەنها لەگەڵ ئەو لایەنانە هاوبەش دەکرێت کە پێویستە بۆ تەواوکردنی داواکارییەکەت:</p>
+      <ul>
+        <li>کۆمپانیاکانی گەیاندن و هاوکارانی خزمەت (تەنها بۆ دابینکردنی داواکارییەکەت)</li>
+        <li>لایەنی یاساییەکان ئەگەر یاسا پێویست بکرێت</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-ban"></i>
+        زانیارییەکانت <strong>نافرۆشرێن</strong> بە هیچ کەسێکی سێیەم.
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="sec-card" id="sec4">
+    <div class="sec-hdr">
+      <div class="sec-num">4</div>
+      <div class="sec-title">کووکیز و شوێننیشانەری دیکە</div>
+      <i class="fas fa-cookie-bite sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>لەوانەیە کووکیز و تەکنەلۆجیاکانی هاوشێوەی شوێننیشانەر بەکاربهێنین بۆ:</p>
+      <ul>
+        <li>باشترکردنی ئەزموونی گەڕانت</li>
+        <li>شیکردنەوەی ئامارەکانی سایت</li>
+        <li>بیرکردنەوەی ئامۆژگاریەکانت</li>
+      </ul>
+      <p>دەتوانیت کووکیزەکان لە ڕێگەی ڕێکخستنەکانی براوزەرەکەت کۆنترۆل بکەیت.</p>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="sec-card" id="sec5">
+    <div class="sec-hdr">
+      <div class="sec-num">5</div>
+      <div class="sec-title">چەندێک زانیارییەکانت پاراستراون؟</div>
+      <i class="fas fa-clock sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>زانیارییەکانت تەنها بۆ ئەو ماوەیەی پێویستە بۆ دەستپێکردنی مەبەستەکانی باسکراو لەم ئاگادارییەدا پاراستراون — مەگەر یاسا ماوەی درێژتر داوا بکات.</p>
+      <div class="highlight-box">
+        <i class="fas fa-clock"></i>
+        دوای مامەڵەکراوی داواکارییەکانت، زانیارییەکان لەدایبەزێنراون مەگەر پێویستی یاساییمان بێت.
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="sec-card" id="sec6">
+    <div class="sec-hdr">
+      <div class="sec-num">6</div>
+      <div class="sec-title">چۆن زانیارییەکانت پاراستراون؟</div>
+      <i class="fas fa-shield-halved sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>ئێمە چارەسەرە تەکنیکییە گونجاوەکانمان دامەزراندووە بۆ پارێزگاری لە زانیارییەکانت. بەڵام هیچ گواستنەوەیەکی ئەلیکترۆنیکی لەسەر ئینتەرنێت ١٠٠٪ دڵنیادار نییە.</p>
+      <ul>
+        <li>شیفرەکردنی زانیاری لەکاتی ناردن</li>
+        <li>کۆگاکردنی دڵنیای زانیاری</li>
+        <li>دەستگەی سنووردار بۆ کارمەندانی کارپێکراو</li>
+        <li>بینینی بەردەوامی سیستەمەکانمان</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="sec-card" id="sec7">
+    <div class="sec-hdr">
+      <div class="sec-num">7</div>
+      <div class="sec-title">مافە تایبەتمەندیەکانت چین؟</div>
+      <i class="fas fa-user-check sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>پشت بەستە لەسەر شوێنی نیشتەجێبوونت، لەوانەیە ئەم مافانەت هەبێت:</p>
+      <ul>
+        <li>داوای بینینی زانیارییەکانت بکەیت</li>
+        <li>داوای ڕاستکردنەوەی زانیارییە هەڵەکان بکەیت</li>
+        <li>داوای سڕینەوەی زانیارییەکانت بکەیت</li>
+        <li>دژایەتی پرۆسەکردنی زانیاریەکانت بکەیت</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-envelope"></i>
+        بۆ بەکارهێنانی مافەکانت، پەیوەندی بکە بە: <strong>Info@ukbazar.online</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="sec-card" id="sec8">
+    <div class="sec-hdr">
+      <div class="sec-num">8</div>
+      <div class="sec-title">کۆنترۆل و بەڕێوەبردنی ئەژمار</div>
+      <i class="fas fa-sliders sec-icon"></i>
+    </div>
+    <div class="sec-body">
+      <p>هەر کاتێک دەتوانیت ئەژمارەکەت پێداچوونەوە بکەیت، بیگۆڕیت یان دابیخەیت.</p>
+      <p>ئەگەر پرسیار یان تێبینیت لەبارەی مافە تایبەتمەندیەکانەوە هەبێت، پەیوەندیمان پێوە بکە.</p>
+      <div class="highlight-box">
+        <i class="fas fa-info-circle"></i>
+        ئەم سیاسەتە دەتوانرێت لە هەر کاتێکدا نوێ بکرێتەوە. گۆڕانکارییە گرینگەکان ئاگادارت دەکەینەوە.
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h3>📬 پرسیارت هەیە؟</h3>
+    <p>تیمی UK BAZAR ئامادەیە بە خۆشەوییەوە وەڵامی پرسیارەکانت بداتەوە</p>
+    <div class="contact-btns">
+      <a href="mailto:Info@ukbazar.online" class="cbtn cbtn-primary">
+        <i class="fas fa-envelope"></i>
+        Info@ukbazar.online
+      </a>
+      <a href="https://wa.me/447755436275" class="cbtn cbtn-outline" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        واتساپ
+      </a>
+      <a href="tel:+447755436275" class="cbtn cbtn-outline">
+        <i class="fas fa-phone"></i>
+        07755 436275
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="./logo-ukbazar.png" alt="UK BAZAR" onerror="this.style.display='none'">
+      <span>UK BAZAR</span>
+    </div>
+    <p>© 2026 UK POST LTD — UK BAZAR · Kurdistan &amp; United Kingdom</p>
+    <p>
+      <a href="./index.html">ماڵپەڕی سەرەکی</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:Info@ukbazar.online">Info@ukbazar.online</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
